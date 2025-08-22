@@ -1,0 +1,41 @@
+:root {
+  --brand: #0d6efd; /* Bootstrap primary */
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Sections */
+.section-pad { padding: 4rem 0; }
+.section-title { font-weight: 700; margin-bottom: 1.25rem; }
+
+/* Hero */
+.hero {
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(13,110,253,.15), transparent),
+              radial-gradient(1000px 500px at 90% 10%, rgba(32,201,151,.12), transparent);
+}
+
+/* Timeline */
+.timeline { position: relative; margin-left: 0.5rem; }
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 0; bottom: 0;
+  width: 2px; background: var(--bs-border-color);
+}
+.timeline-item { position: relative; padding-left: 2.5rem; margin-bottom: 1.5rem; }
+.timeline-dot {
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--brand);
+  position: absolute; left: 7px; top: 6px;
+}
+.icon-list { list-style: none; padding-left: 0; }
+.icon-list li { margin-bottom: .5rem; }
+
+/* Smooth anchor offset for sticky nav */
+:target { scroll-margin-top: 100px; }
