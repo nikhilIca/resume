@@ -5,35 +5,144 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Nikhil Rai · Data Engineer</title>
-  <meta name="description" content="Nikhil Rai — Google Cloud Certified Professional Data Engineer. 9+ years building scalable, on-prem and cloud-native data solutions across retail and telecom." />
+  <meta name="description" content="Nikhil Rai — Google Cloud Certified Professional Data Engineer. 9+ years delivering scalable on‑prem and cloud‑native data platforms across retail & telecom." />
+  <meta name="author" content="Nikhil Rai" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#635bff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#101114" media="(prefers-color-scheme: dark)">
 
-  <!-- Open Graph / SEO -->
-  <meta property="og:title" content="Nikhil Rai · Data Engineer" />
-  <meta property="og:description" content="GCP Certified Data Engineer with 9+ years in retail & telecom, Python/SQL/Terraform, modern data platforms, and governance." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://<your-username>.github.io/resume-portfolio/" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nikhil Rai · Data Engineer">
+  <meta property="og:description" content="GCP Certified Data Engineer with 9+ years in retail & telecom, Python/SQL/Terraform, modern data platforms, and governance.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop">
 
   <!-- Fonts -->
-  <link rel="preconnect" href="  https://fonts.gstatic.com
-  https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap & Icons (latest) -->
-  https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css
-  <link href="https://cdn.jsdelivrtstrap-icons@1.11.3/font/bootstrap-icons.min.css
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" relmate on Scroll) -->
+  <link href="https://s@2.3.4/dist/aos.css">
 
-  <!-- Custom CSS -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    :root{
+      --brand:#635bff;
+      --accent:#20c997;
+      --hero-gradient:linear-gradient(135deg,#635bff 0%,#2ec5ff 40%,#20c997 100%);
+    }
+
+    /* Base + smooth page load */
+    html,body{height:100%}
+    body{
+      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.65;
+      opacity:0; animation:fadeIn .7s ease-out .05s forwards;
+      background:
+        radial-gradient(1200px 600px at 0% -10%, rgba(99,91,255,.07), transparent 60%),
+        radial-gradient(800px 400px at 100% -5%, rgba(32,201,151,.08), transparent 55%),
+        radial-gradient(900px 600px at 50% 110%, rgba(46,197,255,.06), transparent 60%),
+        var(--bs-body-bg);
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      scroll-behavior:smooth;
+    }
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+    /* Navbar */
+    .navbar{backdrop-filter:saturate(1.2) blur(10px); transition:padding .25s ease, box-shadow .25s ease}
+    .navbar .nav-link{font-weight:600; position:relative}
+    .navbar .nav-link::after{
+      content:""; position:absolute; left:.5rem; right:.5rem; bottom:.35rem;
+      height:2px; background:currentColor; transform:scaleX(0); transform-origin:left; transition:transform .25s;
+      opacity:.5;
+    }
+    .navbar .nav-link:hover::after{transform:scaleX(1)}
+    .navbar.shrink{padding-top:.35rem!important; padding-bottom:.35rem!important; box-shadow:0 4px 18px rgba(0,0,0,.06)}
+
+    /* Hero with GPU parallax layer (mobile-safe) */
+    .hero{position:relative; color:#fff; overflow:hidden}
+    .hero-bg{
+      position:absolute; inset:0; z-index:0;
+      background-image:var(--hero-gradient), url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover; background-position:center;
+      transform:translate3d(0,0,0); will-change:transform;
+    }
+    .hero::after{content:""; position:absolute; inset:0; z-index:0; background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.25) 40%, rgba(0,0,0,.18))}
+    .hero-inner{position:relative; z-index:1}
+
+    /* Animated blobs */
+    .blob{position:absolute; filter:blur(48px); opacity:.5; z-index:0; animation:float 18s ease-in-out infinite}
+    .blob.b1{width:320px;height:320px;left:-80px;top:-60px;background:#7c6cff;animation-delay:0s}
+    .blob.b2{width:260px;height:260px;right:-60px;top:20px;background:#2ec5ff;animation-delay:3s}
+    .blob.b3{width:300px;height:300px;right:10%;bottom:-80px;background:#20c997;animation-delay:6s}
+    @keyframes float{0%,100%{transform:translateY(0) translateX(0) scale(1)}50%{transform:translateY(-20px) translateX(10px) scale(1.05)}}
+
+    /* Sections */
+    .section-pad{padding:4.75rem 0}
+    .section-title{font-weight:800; letter-spacing:.2px; margin-bottom:.75rem}
+    .section-sub{color:var(--bs-secondary-color); margin-bottom:2rem}
+
+    /* Glass cards */
+    .glass{
+      background: color-mix(in oklab, var(--bs-body-bg) 78%, transparent);
+      border:1px solid var(--bs-border-color);
+      border-radius:1rem;
+      box-shadow:0 10px 30px rgba(0,0,0,.06), 0 2px 8px rgba(0,0,0,.04);
+    }
+    .card-hover{transition:transform .35s ease, box-shadow .35s ease}
+    .card-hover:hover{transform:translateY(-6px) scale(1.01); box-shadow:0 16px 44px rgba(0,0,0,.18)}
+
+    .card-img-top{width:100%; height:180px; object-fit:cover; display:block}
+
+    /* Timeline */
+    .timeline{position:relative; margin-left:.25rem}
+    .timeline::before{content:""; position:absolute; left:14px; top:0; bottom:0; width:2px; background:var(--bs-border-color)}
+    .timeline-item{position:relative; padding-left:2.75rem; margin-bottom:1.75rem}
+    .timeline-dot{
+      width:12px;height:12px;border-radius:50%;background:var(--brand);
+      position:absolute; left:9px; top:7px; box-shadow:0 0 0 5px color-mix(in oklab, var(--brand), transparent 78%)
+    }
+
+    /* Chips */
+    .chip{
+      display:inline-flex; align-items:center; gap:.4rem; padding:.45rem .7rem;
+      border:1px solid var(--bs-border-color); border-radius:.75rem; font-weight:600; margin:0 .4rem .5rem 0; background:var(--bs-body-bg)
+    }
+    .chip i{color:var(--brand)}
+
+    /* Counters */
+    .counter{font-size:2.5rem; font-weight:800; color:var(--brand)}
+
+    /* Skill bars */
+    .skill{margin-bottom:.85rem}
+    .skill-label{display:flex; justify-content:space-between; font-weight:600; margin-bottom:.3rem}
+    .progress{height:.6rem; background:color-mix(in oklab, var(--bs-body-color) 8%, transparent); border-radius:999px}
+    .progress-bar{background:linear-gradient(90deg, var(--brand), var(--accent)); width:0%}
+
+    /* Scroll-to-top */
+    #toTop{
+      position:fixed; right:16px; bottom:16px; width:44px; height:44px; border-radius:50%;
+      display:grid; place-items:center; border:1px solid var(--bs-border-color); background:var(--bs-body-bg);
+      color:var(--bs-body-color); box-shadow:0 8px 20px rgba(0,0,0,.08); opacity:0; visibility:hidden; transform:translateY(12px);
+      transition:all .25s ease; z-index:1050
+    }
+    #toTop.show{opacity:1; visibility:visible; transform:translateY(0)}
+
+    /* Dark mode tweak: slightly stronger hint text */
+    [data-bs-theme="dark"] .text-white-50{color:rgba(255,255,255,.65)!important}
+  </style>
 </head>
-
 <body>
+
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg sticky-top bg-body border-bottom">
+  <nav class="navbar navbar-expand-lg sticky-top bg-body border-bottom py-3">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#">Nikhil Rai</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div id="navMain" class="collapse navbar-collapse">
+      <div id="nav" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
@@ -51,35 +160,87 @@
   </nav>
 
   <!-- Hero -->
-  <header class="py-5 bg-gradient hero">
-    <div class="container py-4 text-center text-lg-start">
+  <header class="hero py-5 border-bottom">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="blob b1" aria-hidden="true"></div>
+    <div class="blob b2" aria-hidden="true"></div>
+    <div class="blob b3" aria-hidden="true"></div>
+
+    <div class="container hero-inner py-5">
       <div class="row align-items-center g-4">
-        <div class="col-lg-8">
-          <h1 class="display-5 fw-bold mb-3">Data Engineer — GCP Certified</h1>
+        <div class="col-lg-7" data-aos="fade-up">
+          <span class="badge rounded-pill text-bg-light text-dark fw-semibold mb-3" style="backdrop-filter: blur(8px);">
+            <i class="bi bi-patch-check-fill text-success me-1"></i> GCP Certified · Data Engineer
+          </span>
+          <h1 class="display-5 fw-bold mb-3">I build modern, scalable data platforms</h1>
           <p class="lead mb-4">
-            9+ years designing and building scalable <strong>on‑prem</strong> and <strong>cloud‑native</strong> data solutions across retail & telecom.
-            Currently contributing to ICA Sverige AB’s modern data platform. Skilled in <strong>Python</strong>, <strong>SQL</strong>, and <strong>Terraform</strong>, with a passion for clean architecture and data governance.
+            9+ years across retail &amp; telecom delivering <strong>on‑prem</strong> and <strong>cloud‑native</strong> solutions on GCP.
+            Python · SQL · Terraform · Kafka · Dataflow · BigQuery · dbt · Airflow · Spark/Hadoop.
           </p>
-          <div class="d-flex gap-2 flex-wrap">
-            <a class="btn btn-primary" href="#projects"><i class="bi bi-rocket-takeoff me-2"></i>See Projects</a>
-            <a class="btn btn-outline-primary" href="mailto:nikhil.rai45@gmail.com"><i class="bi bi-envelope me-2"></i>Email Me</a>
-            <!-- Optional: add a PDF later at assets/Nikhil_Rai_Resume.pdf -->
-            <!-- <a class="btn btn-outline-secondary" href="assets/Nikhil_Rai_Resume.pdf" download>Download Resume</a> -->
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-light text-dark" href="#projects"><i class="bi bi-rocket-takeoff me-2"></i>See Projects</a>
+            <a class="btn btn-outline-light" href="mailto:nikhil.rai45@gmail.com" rel="noopener"><i class="bi bi-envelope me-2"></i>Email</a>
+            <a class="btn btn-outline-light" href="#contact"><i class="bi bi-geo-alt me-2"></i>Solna, Sweden</a>
           </div>
         </div>
-      </div>
+        <div class="col-lg-5" data-aos="zoom-in">
+          <div class="glass p-4 card-hover">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <i class="bi bi-diagram-3 text-primary fs-4" aria-hidden="true"></i>
+              <div>
+                <div class="fw-bold">Architecture</div>
+                <div class="text-white-50">Data Vault + Dimensional, cost‑efficient design</div>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <i class="bi bi-lightning-charge text-warning fs-4" aria-hidden="true"></i>
+              <div>
+                <div class="fw-bold">Real‑time</div>
+                <div class="text-white-50">Kafka, Dataflow, streaming analytics</div>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+              <i class="bi bi-people text-success fs-4" aria-hidden="true"></i>
+              <div>
+                <div class="fw-bold">Ways of Working</div>
+                <div class="text-white-50">Scrum, mentoring, reliable delivery</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /row -->
     </div>
   </header>
 
-  <main>
+  <main id="main">
+    <!-- Counters -->
+    <section class="section-pad bg-body-tertiary text-center">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="flip-left">
+            <div class="counter" data-target="9">0</div>
+            <p>Years Experience</p>
+          </div>
+          <div class="col-md-4" data-aos="flip-left" data-aos-delay="100">
+            <div class="counter" data-target="15">0</div>
+            <p>Projects Delivered</p>
+          </div>
+          <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+            <div class="counter" data-target="5">0</div>
+            <p>Certifications</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- About -->
     <section id="about" class="section-pad">
       <div class="container">
-        <h2 class="section-title">Profile Summary</h2>
-        <p>
-          Certified Google Cloud Professional Data Engineer with a track record of delivering high‑impact, cost‑efficient data platforms.
-          I design, develop, and architect real‑time pipelines, lakehouse models, and dual‑layer warehouses on GCP—enabling analytics and operational use cases at scale.
-          I bring strong Python/SQL/Terraform skills, agile leadership, and a focus on metadata‑driven, well‑governed design.
+        <h2 class="section-title" data-aos="fade-up">Profile Summary</h2>
+        <p class="section-sub" data-aos="fade-up" data-aos-delay="80">
+          Certified Google Cloud Professional Data Engineer with a track record of building high‑impact, cost‑efficient data platforms.
+          I design, develop, and operate real‑time pipelines, lakehouse models, and dual‑layer warehouses on GCP—enabling analytics and operational insights at scale.
+          I bring strong Python/SQL/Terraform skills, agile leadership, and a passion for clean, metadata‑driven architecture and governance.
         </p>
       </div>
     </section>
@@ -87,71 +248,92 @@
     <!-- Projects -->
     <section id="projects" class="section-pad bg-body-tertiary">
       <div class="container">
-        <h2 class="section-title">Projects</h2>
-
+        <h2 class="section-title" data-aos="fade-up">Selected Projects</h2>
         <div class="row g-4">
-          <div class="col-md-6">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <h3 class="h5 card-title">BICA — ICA Sverige</h3>
-                <ul class="mb-0">
-                  <li>Designed & developed scalable pipelines on <strong>GCP</strong> using <strong>Kafka</strong> and <strong>Dataflow</strong> to ingest high‑volume data.</li>
-                  <li>Built a <strong>BigQuery</strong> data lake; transformations with <strong>dbt</strong>.</li>
-                  <li>Architected a dual‑layer warehouse (Data Vault + Dimensional) with cost efficiency.</li>
-                  <li>Exposed curated data via <strong>Cloud Run</strong> APIs; integrated with external systems.</li>
-                  <li>Delivered agile, business‑aligned Data Marts; collaborated on metadata governance.</li>
+          <!-- Project 1 -->
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="glass h-100 card-hover overflow-hidden">
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1527430275714-8515f43eece1?q=80&w=1200&auto=format&fit=crop" alt="Project architecture image" loading="lazy" width="ustify-content-between mb-2">
+                  <h3 class="h5 mb-0">BICA — ICA Sverige</h3>
+                  <span class="badge text-bg-primary">GCP</span>
+                </div>
+                <ul class="mb-3">
+                  <li>High‑volume pipelines on <strong>Kafka</strong> + <strong>Dataflow</strong>.</li>
+                  <li><strong>BigQuery</strong> lake with <strong>dbt</strong> transformations.</li>
+                  <li>Dual‑layer warehouse (Data Vault + Dimensional), cost‑optimized.</li>
+                  <li>APIs via <strong>Cloud Run</strong>; external integrations.</li>
                 </ul>
+                <div>
+                  <span class="chip"><i class="bi bi-diagram-3"></i> Architecture</span>
+                  <span class="chip"><i class="bi bi-lightning"></i> Real‑time</span>
+                  <span class="chip"><i class="bi bi-database"></i> BigQuery</span>
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="col-md-6">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <h3 class="h5 card-title">Telia CDL — Telia</h3>
-                <ul class="mb-0">
-                  <li>Led a team of 4 for the Common Data Lake initiative; built robust ETL.</li>
-                  <li>Batch & micro‑batch streaming using on‑prem <strong>Hadoop</strong> stack (HDFS, Hive, Spark, Sqoop) orchestrated with <strong>Airflow</strong>.</li>
-                  <li>Ensured model alignment with business needs; drove quality and reliability.</li>
-                  <li>Production support, code reviews, mentoring; client coordination and timely delivery.</li>
-                  <li>Implemented ITIL processes for incident, problem & change management.</li>
+          <!-- Project 2 -->
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="glass h-100 card-hover overflow-hidden">
+              https://images.unsplash.com/photo-1529101091764-c3526daf38fe?q=80&w=1200&auto=format&fit=crop
+              <div class="p-4">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                  <h3 class="h5 mb-0">Telia CDL — Telia</h3>
+                  <span class="badge text-bg-success">On‑prem</span>
+                </div>
+                <ul class="mb-3">
+                  <li>Led team of 4 for CDL; robust ETL &amp; operations.</li>
+                  <li>Batch &amp; micro‑batch on <strong>HDFS</strong>, <strong>Hive</strong>, <strong>Spark</strong>, <strong>Sqoop</strong> with <strong>Airflow</strong>.</li>
+                  <li>Model alignment, data quality &amp; reliability engineering.</li>
                 </ul>
+                <div>
+                  <span class="chip"><i class="bi bi-graph-up"></i> ETL</span>
+                  <span class="chip"><i class="bi bi-diagram-3"></i> Hadoop</span>
+                  <span class="chip"><i class="bi bi-funnel"></i> Airflow</span>
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="col-md-6">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <h3 class="h5 card-title">ITEL — Telenet Belgium</h3>
-                <ul class="mb-0">
-                  <li>Supported DevOps & Architecture teams on scalable middleware using <strong>TIBCO</strong>.</li>
-                  <li>Streamlined deployments with CI/CD and automation; onsite–offshore coordination.</li>
-                  <li>Aligned integration workflows to business goals, improving throughput and stability.</li>
+          <!-- Project 3 -->
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="glass h-100 card-hover overflow-hidden">
+              https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1200&auto=format&fit=crop
+              <div class="p-4">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                  <h3 class="h5 mb-0">ITEL — Telenet Belgium</h3>
+                  <span class="badge text-bg-warning">Integration</span>
+                </div>
+                <ul class="mb-3">
+                  <li>Middleware at scale with <strong>TIBCO</strong>; DevOps &amp; Architecture support.</li>
+                  <li>CI/CD automation; onsite–offshore coordination.</li>
+                  <li>Workflow alignment to business goals; higher throughput &amp; stability.</li>
                 </ul>
+                <div>
+                  <span class="chip"><i class="bi bi-gear"></i> DevOps</span>
+                  <span class="chip"><i class="bi bi-arrow-repeat"></i> CI/CD</span>
+                  <span class="chip"><i class="bi bi-diagram-3-fill"></i> Integration</span>
+                </div>
               </div>
             </div>
           </div>
-
-        </div>
+        </div><!-- /row -->
       </div>
     </section>
 
     <!-- Experience -->
     <section id="experience" class="section-pad">
       <div class="container">
-        <h2 class="section-title">Employment</h2>
+        <h2 class="section-title" data-aos="fade-up">Employment</h2>
         <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
+          <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-dot" aria-hidden="true"></div>
             <div class="timeline-content">
               <h3 class="h5 mb-1">ICA Sverige, Sweden</h3>
               <p class="text-muted mb-2">Nov 2021 – Present</p>
               <p>Data Engineer contributing to ICA’s modern data platform and business‑aligned analytics.</p>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="120">
+            <div class="timeline-dot" aria-hidden="true"></div>
             <div class="timeline-content">
               <h3 class="h5 mb-1">Tech Mahindra Ltd, India</h3>
               <p class="text-muted mb-2">Sep 2015 – Oct 2021</p>
@@ -168,70 +350,85 @@
     <!-- Skills -->
     <section id="skills" class="section-pad bg-body-tertiary">
       <div class="container">
-        <h2 class="section-title">Skills</h2>
-        <div class="mb-3 fw-semibold">Technical</div>
-        <div class="d-flex flex-wrap gap-2 mb-4">
-          <span class="badge text-bg-primary">Data Engineering</span>
-          <span class="badge text-bg-primary">Data Modeling</span>
-          <span class="badge text-bg-primary">Python</span>
-          <span class="badge text-bg-primary">SQL</span>
-          <span class="badge text-bg-primary">Spark</span>
-          <span class="badge text-bg-primary">Hadoop</span>
-          <span class="badge text-bg-primary">GCP</span>
-          <span class="badge text-bg-primary">Terraform</span>
-          <span class="badge text-bg-primary">dbt</span>
-          <span class="badge text-bg-primary">Airflow</span>
-          <span class="badge text-bg-primary">Kafka</span>
-          <span class="badge text-bg-primary">Data Vault</span>
-          <span class="badge text-bg-primary">Dimensional Modeling</span>
-        </div>
+        <h2 class="section-title" data-aos="fade-up">Skills</h2>
+        <div class="row g-5">
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="60">
+            <div class="mb-2 fw-semibold">Technical</div>
 
-        <div class="mb-3 fw-semibold">Soft Skills</div>
-        <div class="d-flex flex-wrap gap-2">
-          <span class="badge text-bg-secondary">Scrum Master</span>
-          <span class="badge text-bg-secondary">Team Leadership</span>
-          <span class="badge text-bg-secondary">Communication</span>
-          <span class="badge text-bg-secondary">Agile Methodologies</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Certifications & Languages -->
-    <section class="section-pad">
-      <div class="container">
-        <div class="row g-4">
-          <div class="col-md-6">
-            <h2 class="section-title">Certifications</h2>
-            <ul class="icon-list">
-              <li><i class="bi bi-patch-check-fill text-success me-2"></i>Google Cloud Certified Professional Data Engineer</li>
-            </ul>
+            <div class="skill">
+              <div class="skill-label"><span>Python</span><span class="skill-val">90%</span></div>
+              <div class="progress"><div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" data-value="90"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-label"><span>SQL</span><span class="skill-val">90%</span></div>
+              <div class="progress"><div class="progress-bar" role="progressbar" data-value="90"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-label"><span>Spark/Hadoop</span><span class="skill-val">80%</span></div>
+              <div class="progress"><div class="progress-bar" role="progressbar" data-value="80"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-label"><span>Google Cloud (GCP)</span><span class="skill-val">85%</span></div>
+              <div class="progress"><div class="progress-bar" role="progressbar" data-value="85"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-label"><span>Terraform</span><span class="skill-val">75%</span></div>
+              <div class="progress"><div class="progress-bar" role="progressbar" data-value="75"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-label"><span>dbt / Airflow</span><span class="skill-val">80%</span></div>
+              <div class="progress"><div class="progress-bar" role="progressbar" data-value="80"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-label"><span>Kafka / BigQuery</span><span class="skill-val">85%</span></div>
+              <div class="progress"><div class="progress-bar" role="progressbar" data-value="85"></div></div>
+            </div>
           </div>
-          <div class="col-md-6">
-            <h2 class="section-title">Languages</h2>
-            <ul class="icon-list">
-              <li><i class="bi bi-translate me-2"></i>English (Fluent)</li>
-              <li><i class="bi bi-translate me-2"></i>Hindi (Native)</li>
-            </ul>
+
+          <div class="col-lg-5" data-aos="fade-up" data-aos-delay="120">
+            <div class="mb-2 fw-semibold">Soft Skills</div>
+            <div>
+              <span class="chip"><i class="bi bi-people"></i> Team Leadership</span>
+              <span class="chip"><i class="bi bi-kanban"></i> Scrum Master</span>
+              <span class="chip"><i class="bi bi-chat-dots"></i> Communication</span>
+              <span class="chip"><i class="bi bi-arrow-repeat"></i> Agile</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section-pad bg-body-tertiary">
+    <section id="contact" class="section-pad">
       <div class="container">
-        <h2 class="section-title">Contact</h2>
+        <h2 class="section-title" data-aos="fade-up">Contact</h2>
         <div class="row g-3">
-          <div class="col-md-6">
-            <div class="d-flex align-items-center gap-3">
-              <i class="bi bi-envelope-at fs-3 text-primary"></i>
-              <a class="text-decoration-none" href="mailto:nikhil.rai45@gmail.com">nikhil.rai45@gmail.com</a>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="60">
+            <div class="glass p-4 d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center gap-3">
+                <i class="bi bi-envelope-at fs-3 text-primary" aria-hidden="true"></i>
+                <div>
+                  <div class="fw-bold">Email</div>
+                  <a class="text-decoration-none" href="mailto:nikhil.rai45@gmail.com">nikhil.rai45@gmail.com</a>
+                </div>
+              </div>
+              <button class="btn btn-outline-secondary btn-sm" type="button" aria-label="Copy email" onclick="navigator.clipboard.writeText('nikhil.rai45@gmail.com')">
+                <i class="bi bi-clipboard"></i>
+              </button>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="d-flex align-items-center gap-3">
-              <i class="bi bi-telephone fs-3 text-primary"></i>
-              <a class="text-decoration-none" href="tel:+46761580449">+46 761 580 449</a>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="120">
+            <div class="glass p-4 d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center gap-3">
+                <i class="bi bi-telephone fs-3 text-primary" aria-hidden="true"></i>
+                <div>
+                  <div class="fw-bold">Phone</div>
+                  <a class="text-decoration-none" href="tel:+46761580449">+46 761 580 449</a>
+                </div>
+              </div>
+              <a class="btn btn-outline-secondary btn-sm" href="tel:+46761580449" aria-label="Call">
+                <i class="bi bi-telephone-outbound"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -239,26 +436,111 @@
     </section>
   </main>
 
+  <!-- Scroll to Top -->
+  <button id="toTop" aria-label="Scroll to top"><i class="bi bi-arrow-up"></i></button>
+
   <footer class="py-4 border-top">
     <div class="container text-center">
       <small>© <span id="year"></span> Nikhil Rai · Solna</small>
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></ssets/js/main.js"></script>
+  <!-- Scripts (defer to avoid render-blocking) -->
+  https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js
+  https://unpkg.com/aos@2.3.4/dist/aos.js
+  <script>
+    // Run after deferred scripts
+    window.addEventListener('DOMContentLoaded', function () {
+      // AOS
+      if (window.AOS) AOS.init({ once:true, duration:900, offset:110, easing:'ease-out' });
 
-  <!-- Structured Data -->
+      // Current year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Theme toggle with persistence
+      const root = document.documentElement;
+      const btn = document.getElementById('themeToggle');
+      function setTheme(mode){
+        root.setAttribute('data-bs-theme', mode);
+        localStorage.setItem('color-mode', mode);
+        btn.innerHTML = (mode === 'dark') ? '<i class="bi bi-brightness-high"></i>' : '<i class="bi bi-moon-stars"></i>';
+      }
+      setTheme(localStorage.getItem('color-mode') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+      btn.addEventListener('click', ()=> setTheme(root.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark'));
+
+      // Navbar shrink on scroll
+      const nav = document.querySelector('.navbar');
+      const onScrollNav = () => {
+        if (window.scrollY > 10) nav.classList.add('shrink'); else nav.classList.remove('shrink');
+      };
+      onScrollNav(); window.addEventListener('scroll', onScrollNav);
+
+      // Scroll-to-top
+      const toTop = document.getElementById('toTop');
+      const onScrollTop = () => { (window.scrollY > 300) ? toTop.classList.add('show') : toTop.classList.remove('show'); };
+      window.addEventListener('scroll', onScrollTop);
+      toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+      // Animated counters when visible
+      const counters = document.querySelectorAll('.counter');
+      const counterObs = new IntersectionObserver((entries, obs)=>{
+        entries.forEach(entry=>{
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          const target = +el.getAttribute('data-target') || 0;
+          const step = Math.max(1, Math.round(target / 80));
+          let val = 0;
+          const tick = () => {
+            val += step;
+            if (val >= target) { el.textContent = target; return; }
+            el.textContent = val; requestAnimationFrame(tick);
+          };
+          tick();
+          obs.unobserve(el);
+        });
+      }, { threshold: .35 });
+      counters.forEach(c => counterObs.observe(c));
+
+      // Animate skill bars on reveal
+      const bars = document.querySelectorAll('.progress-bar');
+      const barObs = new IntersectionObserver((entries, obs)=>{
+        entries.forEach(entry=>{
+          if (!entry.isIntersecting) return;
+          const bar = entry.target;
+          const value = bar.getAttribute('data-value') || '0';
+          bar.style.transition = 'width 1.2s ease';
+          requestAnimationFrame(()=> bar.style.width = value + '%');
+          obs.unobserve(bar);
+        });
+      }, { threshold:.4 });
+      bars.forEach(b => barObs.observe(b));
+
+      // Parallax hero background (mobile-safe: transforms instead of background-attachment)
+      const heroBg = document.querySelector('.hero-bg');
+      let ticking = false;
+      function parallax(){
+        const y = window.scrollY * 0.25; // parallax strength
+        heroBg.style.transform = `translate3d(0, ${y}px, 0)`;
+        ticking = false;
+      }
+      window.addEventListener('scroll', ()=>{
+        if (!ticking){ window.requestAnimationFrame(parallax); ticking = true; }
+      });
+      parallax();
+    });
+  </script>
+
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Nikhil Rai",
-    "jobTitle": "Data Engineer",
-    "email": "mailto:nikhil.rai45@gmail.com",
-    "telephone": "+46761580449",
-    "knowsAbout": ["Data Engineering", "GCP", "Python", "SQL", "Terraform", "Spark", "Hadoop", "dbt", "Kafka"],
-    "address": { "@type": "PostalAddress", "addressLocality": "Solna", "addressCountry": "SE" }
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Nikhil Rai",
+    "jobTitle":"Data Engineer",
+    "email":"mailto:nikhil.rai45@gmail.com",
+    "telephone":"+46761580449",
+    "address":{"@type":"PostalAddress","addressLocality":"Solna","addressCountry":"SE"},
+    "knowsAbout":["Data Engineering","GCP","Python","SQL","Terraform","Spark","Hadoop","dbt","Kafka","Airflow","BigQuery","Data Vault","Dimensional Modeling"]
   }
   </script>
 </body>
